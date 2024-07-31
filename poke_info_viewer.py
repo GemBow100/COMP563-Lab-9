@@ -1,4 +1,7 @@
 """ 
+Team:
+Joelle Waugh, Manuel Manrique Lopez, Ricardo Rudin, Sadia Shoily
+
 Description: 
   Graphical user interface that displays select information about a 
   user-specified Pokemon fetched from the PokeAPI 
