@@ -68,7 +68,8 @@ def handle_btn_get_info():#???
         messagebox.showinfo(title ='Error', message =  error_message, icon='error')
 
 btn_get_info =ttk.Button(frm_input)#???
-btn_get_info.grid(row=0, column=1)#???
+lbl
+btn_get_info.grid(row=0, column=1, sticky= E)#???
 
 #populate the info frame with widgets
 # For the height Widget
