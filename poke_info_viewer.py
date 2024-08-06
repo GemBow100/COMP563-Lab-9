@@ -67,29 +67,28 @@ def handle_btn_get_info():
         error_message = (f'Unable to fetch information for Bob from the PokeApi.')
         messagebox.showinfo(title ='Error', message =  error_message, icon='error')
 
-btn_get_info =ttk.Button(frm_input)
-#lbl
-btn_get_info.grid(row=0, column=1, sticky= E)
+btn_get_info =ttk.Button(frm_input, text= "Get Info")
+btn_get_info.grid(row=0, column=2, pady=10, sticky= E)
 
 #populate the info frame with widgets
 # For the height Widget
 lbl_height= ttk.Label(frm_info, text="Height: ")
-lbl_height.grid(row=1, column = 0, padx=(20,10), pady=(10,20), sticky= W)
+lbl_height.grid(row=2, column= 0,padx=(20,10),pady=(10,20), sticky=W)
 lbl_height_val = ttk.Label(frm_info, width =20)
-lbl_height_val.grid(row=1, column = 0, padx=(20,10), pady=(10,20), sticky= E)
+lbl_height_val.grid(row=2, column = 1, pady=(20,10),padx=(20,10), sticky=E)
                          
 ## Do the same for 
 #For the Weight widget
 lbl_weight = ttk.Label(frm_info, text="Weight: ")
-lbl_weight.grid(row=1, column=0, padx=(20,10), pady=(10,20), sticky=E)
+lbl_weight.grid(row=3, column=0, padx=(20,10), pady=(10,20),sticky=W)
 lbl_weight_val =ttk.Label(frm_info,width=20)
-lbl_weight_val.grid(row=1, column=0, padx=(20,10), pady=(10,20), sticky=E)
+lbl_weight_val.grid(row=3, column=1, padx=(20,10), pady=(10,20), sticky=E)
 
 #For Type widget
-lbl_type = ttk.Label(frm_info, text="Weight: ")
-lbl_type.grid(row=1, column=0, padx=(20,10), pady=(10,20), sticky=E)
+lbl_type = ttk.Label(frm_info, text="Type: ")
+lbl_type.grid(row=4, column=0, padx=(20,10), pady=(10,20), sticky=W)
 lbl_type_val =ttk.Label(frm_info,width=20)
-lbl_type_val.grid(row=1, column=0, padx=(20,10), pady=(10,20), sticky=E)
+lbl_type_val.grid(row=4, column=1, padx=(20,10), pady=(10,20), sticky=E)
 
 
 ##Stats frame
@@ -98,7 +97,7 @@ PRG_BAR_LENGHT = 200
 #This is for the HP bar
 label_hp = ttk.Label(frm_stats, text = "HP:")
 label_hp.grid(row=0, column=0, padx=(10,5), pady=(10,5), sticky=E)
-bar_hp = ttk.Progressbar(frm_stats, length=200, maximum=255.0) #??? Do we need to match the image???##
+bar_hp = ttk.Progressbar(frm_stats, length=200, maximum=210) 
 bar_hp.grid(row=0, column=1, padx=(0,10), pady=(10,5))
 # This is for the attack bar
 lbl_attack = ttk.Label(frm_stats, text="Attack:")
@@ -108,23 +107,23 @@ bar_attack.grid(row=1, column=1, padx=(0,10), pady=5)
 ## Do the same for Defense, Special attack, Special Defense
 #This is for the Defense bar 
 lbl_defense = ttk.Label(frm_stats, text="Defense:")
-lbl_defense.grid(row=1, column=0, padx=(10,5), pady=5, sticky=E)
+lbl_defense.grid(row=2, column=0, padx=(10,5), pady=5, sticky=E)
 bar_defense = ttk.Progressbar(frm_stats, length=200, maximum=255.0)
-bar_defense.grid(row=1, column=1, padx=(0,10), pady=5)
+bar_defense.grid(row=2, column=1, padx=(0,10), pady=5)
 # This is for the Special attack bar
 lbl_special_attack = ttk.Label(frm_stats, text="Special Attack:")
-lbl_special_attack.grid(row=1, column=0, padx=(10,5), pady=5, sticky=E)
+lbl_special_attack.grid(row=3, column=0, padx=(10,5), pady=5, sticky=E)
 bar_special_attack = ttk.Progressbar(frm_stats, length= 200, maximum=255.0)
-bar_special_attack.grid(row=1, column=1, padx=(0,10), pady=5)
+bar_special_attack.grid(row=3, column=1, padx=(0,10), pady=5)
 #This is for the Special Defense bar
 lbl_special_defense = ttk.Label(frm_stats, text="Special Defense:")
-lbl_special_defense.grid(row=1, column=0, padx=(10,5), pady=5, sticky=E)
+lbl_special_defense.grid(row=4, column=0, padx=(10,5), pady=5, sticky=E)
 bar_special_defense = ttk.Progressbar(frm_stats, length=200, maximum=255.0)
-bar_special_defense.grid(row=1, column=1, padx=(0,10), pady=5)
+bar_special_defense.grid(row=4, column=1, padx=(0,10), pady=5)
 #This is for the speed bar
 lbl_speed = ttk.Label(frm_stats, text="Speed:")
-lbl_speed.grid(row=1, column=0, padx=(10,5), pady=5, sticky=E)
+lbl_speed.grid(row=5, column=0, padx=(10,5), pady=5, sticky=E)
 bar_speed= ttk.Progressbar(frm_stats, length=200, maximum=255.0)
-bar_speed.grid(row=1, column=1, padx=(0,10), pady=5)
+bar_speed.grid(row=5, column=1, padx=(0,10), pady=5)
 
 root.mainloop()
