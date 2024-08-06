@@ -40,7 +40,7 @@ enter_name =  ttk.Entry(frm_input)
 enter_name.insert(0, "Diglett")
 enter_name.grid(row=0, column=1)
 
-def handle_btn_get_info():#???
+def handle_btn_get_info():
     poke_name = enter_name.get().strip()
     if poke_name == '': return 
     poke_info = get_pokemon_info(poke_name)
@@ -67,9 +67,9 @@ def handle_btn_get_info():#???
         error_message = (f'Unable to fetch information for Bob from the PokeApi.')
         messagebox.showinfo(title ='Error', message =  error_message, icon='error')
 
-btn_get_info =ttk.Button(frm_input)#???
-lbl
-btn_get_info.grid(row=0, column=1, sticky= E)#???
+btn_get_info =ttk.Button(frm_input)
+#lbl
+btn_get_info.grid(row=0, column=1, sticky= E)
 
 #populate the info frame with widgets
 # For the height Widget
