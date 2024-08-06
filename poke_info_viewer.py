@@ -48,10 +48,11 @@ def handle_btn_get_info():
         lbl_height_val['text'] = str(poke_info['height']) + ' dm'
         #DO FOR Weight
         lbl_weight_val['text'] = str(poke_info['weight']) + 'hg'
-        lbl_type_val['text'] = ', '.join(types_list)
+      
         types_list = [t['type']['name'].capitalize() for t in poke_info['types']]
        
         #-----stats
+        lbl_type_val['text'] = ', '.join(types_list)
         bar_hp['value'] = poke_info['stats'][0]['base_stat']
         bar_attack['value'] = poke_info['stats'][1]['base_stat']
         ##Finish the rest!!
@@ -67,7 +68,7 @@ def handle_btn_get_info():
         error_message = (f'Unable to fetch information for Bob from the PokeApi.')
         messagebox.showinfo(title ='Error', message =  error_message, icon='error')
 
-btn_get_info =ttk.Button(frm_input, text= "Get Info")
+btn_get_info =ttk.Button(frm_input, text= "Get Info", command=handle_btn_get_info)
 btn_get_info.grid(row=0, column=2, pady=10, sticky= E)
 
 #populate the info frame with widgets
