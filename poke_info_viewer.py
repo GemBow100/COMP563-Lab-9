@@ -65,7 +65,7 @@ def handle_btn_get_info():
         #bar_speed
         bar_speed['value'] = poke_info['stats'][5]['base_stat']
     else:
-        error_message = (f'Unable to fetch information for Bob from the PokeApi.')
+        error_message = (f'Unable to fetch information {poke_name} from the PokeApi.')
         messagebox.showinfo(title ='Error', message =  error_message, icon='error')
 
 btn_get_info =ttk.Button(frm_input, text= "Get Info", command=handle_btn_get_info)
